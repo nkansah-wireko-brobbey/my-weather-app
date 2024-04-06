@@ -1,0 +1,15 @@
+.main-background{
+
+    @apply w-full h-full bg-cover bg-center fixed;
+
+    @apply bg-darkBlue;
+
+    // @apply bg-gradient-to-r from-black-500;
+
+}
+
+@layer components{
+    .bg-glass{
+        // @apply h-full w-full bg-gray-0 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-0 border border-gray-100;
+    }
+}
