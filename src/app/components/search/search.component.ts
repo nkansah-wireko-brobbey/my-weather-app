@@ -1,21 +1,26 @@
 import { Component } from '@angular/core';
 import { WeatherService } from '../../services/weather.service';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { LocationService } from '../../services/location.service';
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss'
 })
 export class SearchComponent {
 
-   weatherService1: WeatherService = new WeatherService();
+  city: string = '';
 
-  constructor(private weatherService: WeatherService) { }
+  constructor(private _location: LocationService) { }
 
-
-  getWeather(city: string): string{
-    return this.weatherService.getWeather(city);
+  getLocation(){
+    this._location.getLocationByCity(this.city).subscribe((response) => {
+      console.log(response);
+    });
   }
+
 }
