@@ -1,13 +1,29 @@
 <div class="main-background">
 
-    <div class="weather bg-glass w-3/5">
+    <div class="weather-card w-3/5" [ngClass]="getCssGlass()">
 
+        
         <app-card>
 
-            
+            <card-title [ngClass]="getCssGlass()">
+                <app-search></app-search>
+            </card-title>
+
+
+            <card-body [ngClass]="getCssGlass()">
+
+
+
+            </card-body>
+            <card-footer>
+
+            </card-footer>
             
         </app-card>
 
     </div>
 
 </div>
+<!-- <h1 class="text-3xl font-bold underline text-bluedark">
+    Hello world!
+  </h1> -->
