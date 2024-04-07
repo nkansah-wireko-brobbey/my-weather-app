@@ -15,6 +15,7 @@ import { SearchComponent } from '../../components/search/search.component';
 })
 export class HomeComponent {
   // cssGlass = cssGlass();
+  imgSrc = './assets/images/cloudy.png'
   constructor(){
     // console.log(typeof this.cssGlass)
   }
