@@ -1,0 +1,21 @@
+.weather-card{
+
+    @apply w-1/2 h-1/2 rounded-lg shadow-lg p-2 flex ;
+
+    app-card{
+        @apply w-full h-full;
+
+        card-title{
+            @apply shadow-lg text-white;
+
+            .form-control{
+                @apply block bg-transparent text-current w-full p-3 ps-5 focus:ring-blue-500 focus:bg-transparent rounded-lg text-sm;
+            }
+        }
+
+        card-body{
+            @apply block shadow-lg w-full p-3;
+        }
+    }
+
+}
