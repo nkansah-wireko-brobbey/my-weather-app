@@ -1,6 +1,6 @@
 .weather-card{
 
-    @apply w-1/2 h-1/2 rounded-lg shadow-lg p-2 flex ;
+    @apply w-1/2 h-fit rounded-lg shadow-lg p-2 flex ;
 
     app-card{
         @apply w-full h-full;
@@ -9,7 +9,7 @@
             @apply shadow-lg text-white;
 
             .form-control{
-                @apply block bg-transparent text-current w-full p-3 ps-5 focus:ring-blue-500 focus:bg-transparent rounded-lg text-sm;
+                @apply block bg-transparent text-current w-full p-3 ps-5 focus:outline-blue-500 focus:bg-transparent focus:outline-8 rounded-lg text-sm;
             }
         }
 
