@@ -8,4 +8,4 @@ interface CityInfo {
 }
 
 // Example API response interface
-export type APIResponse = CityInfo[];
+export type LocationsAPIResponse = CityInfo[];
