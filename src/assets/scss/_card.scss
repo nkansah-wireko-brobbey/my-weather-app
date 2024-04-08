@@ -6,10 +6,10 @@
         @apply w-full h-full;
 
         card-title{
-            @apply shadow-lg text-white;
+            @apply shadow-lg text-white z-10;
 
             .form-control{
-                @apply block bg-transparent text-current w-full p-3 ps-5 focus:outline-blue-500 focus:bg-transparent focus:outline-8 rounded-lg text-sm;
+                @apply block bg-transparent text-current w-full p-3 ps-5 focus:outline-none focus:bg-transparent rounded-lg text-sm;
             }
         }
 
