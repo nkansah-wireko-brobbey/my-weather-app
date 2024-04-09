@@ -9,3 +9,9 @@ interface CityInfo {
 
 // Example API response interface
 export type LocationsAPIResponse = CityInfo[];
+
+
+interface CurrentWeatherRequest{
+    latittude: number;
+    longitude: number;
+}
