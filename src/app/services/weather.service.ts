@@ -1,20 +1,25 @@
 import { Injectable } from '@angular/core';
-import { constructAPI } from '../core/constants/env';
+import { constructWeatherAPI } from '../core/constants/env';
 import { HttpClient } from '@angular/common/http';
+import { Observable, tap } from 'rxjs';
+import { WeatherData } from '../core/models/weather.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WeatherService {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
-  getWeather(city: string): string{
+  getWeather(lat: number, lon: number): Observable<WeatherData>{
+    const url = constructWeatherAPI(lat, lon);
 
-    const API = constructAPI(city);
-
-
-
-    return `The weather in ${city} is 23 degrees celcius`;
+    return this.http.get<WeatherData>(url)
+          .pipe(
+              tap(data => console.log(data))
+              // catchError(this.handleError)
+          );
   }
 }
