@@ -7,7 +7,7 @@
         <ul class="mt-1 w-full absolute rounded-md shadow z-100">
             @for (item of suggestions$(); track $index) {
                 
-                <li class="p-2 ps-5 bg-gray-800 bg-opacity-50 rounded-xsa text-current text-sm font-bold border-b-1 hover:cursor-pointer hover:bg-opacity-60 off bg-blend-luminosity">{{ item.name +','+ item.country}}</li>
+                <li class="p-2 ps-5 bg-gray-800 bg-opacity-50 rounded-xsa text-current text-sm font-bold border-b-1 hover:cursor-pointer hover:bg-opacity-60 off bg-blend-luminosity" (click)="getWeather(item)">{{ item.name +', '+ item.state+', '+item.country}}</li>
 
             }
         </ul>
