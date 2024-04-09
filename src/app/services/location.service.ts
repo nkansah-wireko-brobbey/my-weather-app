@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, tap } from 'rxjs';
-import { constructAPI } from '../core/constants/env';
+import { constructLocationAPI } from '../core/constants/env';
 import { LocationsAPIResponse } from '../core/models/cityInfo.model';
 import { SuggesstionstorageService } from './suggesstionstorage.service';
 
@@ -14,7 +14,7 @@ export class LocationService {
    }
 
    getLocationByCity(city: string): Observable<LocationsAPIResponse> {
-    const API = constructAPI(city);
+    const API = constructLocationAPI(city);
 
      return this.http.get<LocationsAPIResponse>(API).pipe(
         tap((response: LocationsAPIResponse) => {
