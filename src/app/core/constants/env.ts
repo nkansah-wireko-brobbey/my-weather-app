@@ -6,6 +6,10 @@ export const environment = {
     };
 
 
-export const constructAPI = (city: string) => {
+export const constructLocationAPI = (city: string) => {
     return `${API}&q=${city}`;
+}
+
+export const constructWeatherAPI = (lat: number, lon: number) => {
+    return `${API}&lat=${lat}&lon=${lon}`;
 }
