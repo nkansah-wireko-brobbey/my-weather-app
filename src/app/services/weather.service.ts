@@ -3,6 +3,7 @@ import { constructWeatherAPI } from '../core/constants/env';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 import { WeatherData } from '../core/models/weather.model';
+import { WeatherdatastorageService } from './weatherdatastorage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,8 @@ import { WeatherData } from '../core/models/weather.model';
 export class WeatherService {
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private weatherDataStorage: WeatherdatastorageService
   ) { }
 
   getWeather(lat: number, lon: number): Observable<WeatherData>{
@@ -18,7 +20,7 @@ export class WeatherService {
 
     return this.http.get<WeatherData>(url)
           .pipe(
-              tap(data => console.log(data))
+              tap(data => this.weatherDataStorage.addWeatherData(data))
               // catchError(this.handleError)
           );
   }

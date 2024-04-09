@@ -10,27 +10,31 @@
             </card-title>
 
 
-            <card-body [ngClass]="getCssGlass()">
+            @if (weatherData()['main']) {
 
-                <div class="container flex text-white justify-around">
-                    <div class="left w-full z-1">
-                        <img [src]="imgSrc" class="max-w-32" alt="">
+                <card-body [ngClass]="getCssGlass()">
+    
+                    <div class="container flex text-white justify-around">
+                        <div class="left w-full z-1">
+                            <img [src]="imgSrc" class="max-w-32" alt="">
+                        </div>
+                        <div class="right w-full flex flex-col justify-center">
+                            <span class=" block text-4xl font-thin">
+                                {{weatherData().main.temp}}°K
+                            </span>
+                            <!-- location -->
+                            <span class="block font-bold">{{weatherData().name}}, {{weatherData().weather[0].description}}</span>
+                            <span class="block text
+                            -2xl text-sm">
+                                Sunny
+                            </span>
+                            
+                        </div>
                     </div>
-                    <div class="right w-full flex flex-col justify-center">
-                        <span class=" block text-4xl font-thin">
-                            21°C
-                        </span>
-                        <!-- location -->
-                        <span class="block font-bold">Florida, USA</span>
-                        <span class="block text
-                        -2xl text-sm">
-                            Sunny
-                        </span>
-                        
-                    </div>
-                </div>
+    
+                </card-body>
 
-            </card-body>
+            }
             <card-footer>
 
             </card-footer>

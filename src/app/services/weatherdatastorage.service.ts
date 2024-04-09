@@ -24,4 +24,8 @@ export class WeatherdatastorageService {
     this.weatherData.update((value: WeatherData) => this.initialValue);
   }
 
+  getWeatherData(): WeatherData{
+    return this.weatherData();
+  }
+
 }
