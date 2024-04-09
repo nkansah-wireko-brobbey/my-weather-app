@@ -19,9 +19,13 @@
                             <img [src]="imgSrc" class="max-w-32" alt="">
                         </div>
                         <div class="right w-full flex flex-col justify-center">
-                            <span class=" block text-4xl font-thin">
-                                {{weatherData().main.temp}}°K
-                            </span>
+                            <div class="flex align-middle gap-3">
+
+                                <span class="text-4xl font-thin">
+                                    {{weatherData().main.temp | tempconvertor: temperature.unit}}
+                                </span>
+                                <span class="rounded-md bg-yellow-50 bg-opacity-10 px-2 py-1 text-lg font-medium text-yellow-600 ring-1 ring-inset ring-yellow-600/20 hover:cursor-pointer" (click)="toggleUnit()">{{temperature.symbol}}</span>
+                            </div>
                             <!-- location -->
                             <span class="block font-bold">{{weatherData().name}}, {{weatherData().weather[0].description}}</span>
                             <span class="block text
