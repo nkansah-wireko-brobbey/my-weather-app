@@ -1,6 +1,6 @@
 .weather-card{
 
-    @apply w-1/2 h-fit rounded-lg shadow-lg p-2 flex ;
+    @apply md:w-1/2 lg:w-1/3 h-fit rounded-lg shadow-lg p-2 flex sm:w-full ;
 
     app-card{
         @apply w-full h-full;
