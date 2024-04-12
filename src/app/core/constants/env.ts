@@ -13,7 +13,7 @@ export const environment = {
 
 
 export const constructLocationAPI = (city: string) => {
-    return `${LocationAPI}&q=${city}`;
+    return `${LocationAPI}q=${city}`;
 }
 
 export const constructWeatherAPI = (lat: number, lon: number) => {
