@@ -16,6 +16,8 @@ export class LocationService {
    getLocationByCity(city: string): Observable<LocationsAPIResponse> {
     const API = constructLocationAPI(city);
 
+    console.log(API);
+
      return this.http.get<LocationsAPIResponse>(API).pipe(
         tap((response: LocationsAPIResponse) => {
           this.suggestionStore.addSuggestion(response);
