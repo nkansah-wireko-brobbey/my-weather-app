@@ -1,7 +1,7 @@
 // const LocationAPI = 'http://api.openweathermap.org/geo/1.0/direct?limit=5&appid=643cbfb8f3f8c80329b20f9fedcbdb93';
 
 // const LocationAPI = 'http://localhost:3000/api/location?';
-const LocationAPI = 'https://my-weather-app-proxy.vercel.app?';
+const LocationAPI = 'https://my-weather-app-proxy.vercel.app/api/location?';
 
 
 const WeatherAPI = 'https://api.openweathermap.org/data/2.5/weather?appid=643cbfb8f3f8c80329b20f9fedcbdb93'
