@@ -40,8 +40,7 @@ This is a responsive weather application built with Angular 17. It provides user
 
 1. Visit the live app:
 
-   ```bash
-        https://my-weather-app-alpha-six.vercel.app/home
+   ```https://my-weather-app-alpha-six.vercel.app/home
 
 
 ## Installation
