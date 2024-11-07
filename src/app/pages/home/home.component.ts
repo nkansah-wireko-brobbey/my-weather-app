@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 import { SearchComponent } from '../../components/search/search.component';
 import { WeatherdatastorageService } from '../../services/weatherdatastorage.service';
 import { TempconvertorPipe } from '../../pipes/tempconvertor.pipe';
+import { BannerComponent } from '../../components/banner/banner.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CardComponent, CommonModule, SearchComponent,TempconvertorPipe],
+  imports: [CardComponent, CommonModule, SearchComponent,TempconvertorPipe, BannerComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
